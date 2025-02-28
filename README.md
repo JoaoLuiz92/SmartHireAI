@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# SmartHireAI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+SmartHireAI é uma aplicação web que permite o upload e análise de currículos utilizando inteligência artificial. O projeto é desenvolvido com React no frontend e Node.js no backend, utilizando Tailwind CSS para estilização.
 
-## Available Scripts
+## Estrutura do Projeto
 
-In the project directory, you can run:
+O projeto segue os princípios de Domain-Driven Design (DDD) e SOLID para garantir uma arquitetura limpa, escalável e de fácil manutenção.
 
-### `npm start`
+### Domain-Driven Design (DDD)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Domain**: Contém os modelos de domínio e lógica de negócios.
+- **Application**: Contém componentes e lógica de aplicação que orquestram a interação entre o domínio e a infraestrutura.
+- **Infrastructure**: Contém a implementação de detalhes técnicos, como chamadas de API e controladores.
+- **Presentation**: Contém componentes de apresentação, como páginas e componentes de interface do usuário.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Princípios SOLID
 
-### `npm test`
+- **Single Responsibility Principle (SRP)**: Cada classe ou módulo tem uma única responsabilidade.
+- **Open/Closed Principle (OCP)**: Os módulos estão abertos para extensão, mas fechados para modificação.
+- **Liskov Substitution Principle (LSP)**: Os objetos de uma classe podem ser substituídos por instâncias de suas subclasses sem alterar o funcionamento do programa.
+- **Interface Segregation Principle (ISP)**: Muitas interfaces específicas são melhores do que uma interface única e abrangente.
+- **Dependency Inversion Principle (DIP)**: Dependa de abstrações, não de concretizações.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Tecnologias Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Frontend**: React, Tailwind CSS
+- **Backend**: Node.js, Express
+- **AI**: OpenAI API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Configuração do Projeto
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Pré-requisitos
 
-### `npm run eject`
+- Node.js
+- npm ou yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Instalação
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clone o repositório:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+   ```bash
+   git clone https://github.com/seu-usuario/smarthireAI.git
+   cd smarthireAI
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### Instale as dependências do frontend e backend:
+cd frontend
+npm install
+cd ../backend
+npm install
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Configure as variáveis de ambiente no arquivo .env:
+OPENAI_API_KEY=your_openai_api_key_here
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Executando o Projeto
+
+### Inicie o backend:
+cd backend
+npm start
+
+### Inicie o frontend:
+
+cd frontend
+npm start
+
+## Acesse a aplicação em http://localhost:3000.
+
+# Contribuição
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues e pull requests.
+
+# Licença
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
