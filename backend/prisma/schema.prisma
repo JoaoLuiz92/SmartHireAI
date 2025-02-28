@@ -1,0 +1,50 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String  @id @default(uuid())
+  name     String
+  email    String  @unique
+  password String
+  role     String
+  Resume   Resume?
+}
+
+model Resume {
+  id      String @id @default(uuid())
+  userId  String @unique
+  user    User   @relation(fields: [userId], references: [id])
+  content String
+}
+
+model Job {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  company     String
+  postedAt    DateTime @default(now())
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Candidato {
+  id         Int      @id @default(autoincrement())
+  nome       String
+  curriculo  String
+  createdAt  DateTime @default(now())
+}
+
+

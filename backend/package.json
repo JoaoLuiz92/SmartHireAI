@@ -1,0 +1,25 @@
+{
+  "name": "smarthireai",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "tailwindcss build src/index.css -o dist/output.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "multer": "^1.4.5-lts.1",
+    "openai": "^4.85.4",
+    "pdf-parse": "^1.1.1",
+    "pg": "^8.13.3",
+    "prisma": "^6.4.1"
+  }
+}
