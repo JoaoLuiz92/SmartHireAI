@@ -1,0 +1,16 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+.home-page {
+    @apply flex flex-col items-center justify-center min-h-screen bg-gray-100;
+  }
+  
+  .title {
+    @apply text-3xl font-bold text-center text-gray-800 mb-6;
+  }
+  
+  .content {
+    @apply w-full max-w-md p-6 bg-white rounded-lg shadow-lg;
+  }

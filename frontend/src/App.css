@@ -1,0 +1,38 @@
+
+@import "tailwindcss/base"; 
+@import "tailwindcss/components"; 
+@import "tailwindcss/utilities";
+
+.file-input {
+  width: 100%;
+  font-size: 0.875rem;
+  color: #6B7280;
+}
+
+.file-input::-webkit-file-upload-button {
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  border: none;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: #EFF6FF;
+  color: #3B82F6;
+}
+
+.file-input:hover::-webkit-file-upload-button {
+  background-color: #DBEAFE;
+}
+
+.upload-button {
+  @apply mt-4 w-full bg-blue-500 text-white py-2 px-4 rounded-full hover:bg-blue-600 disabled:bg-gray-400;
+}
+
+.error-message {
+  @apply mt-2 text-red-500 text-sm text-center;
+}
+
+.analysis-result {
+  @apply mt-4 text-green-500 text-sm text-center;
+}
+

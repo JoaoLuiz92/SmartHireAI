@@ -1,0 +1,46 @@
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+    .file-input {
+         width: 100%;
+         font-size: 0.875rem;
+         color: #6B7280;
+    }
+
+    .file-input::-webkit-file-upload-button {
+         margin-right: 1rem;
+         padding: 0.5rem 1rem;
+         border-radius: 9999px;
+         border: none;
+         font-size: 0.875rem;
+         font-weight: 600;
+         background-color: #EFF6FF;
+         color: #3B82F6;
+    }
+
+    .file-input:hover::-webkit-file-upload-button {
+         background-color: #DBEAFE;
+    }
+
+    .resume-upload {
+     @apply flex flex-col items-center p-6 bg-white rounded-2xl  border-gray-200 transition-all duration-300;
+   }
+   
+   .file-input {
+     @apply w-full text-sm text-gray-600 py-3 px-4 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition-all;
+   }
+   
+   .upload-button {
+     @apply bg-blue-600 mt-6 text-white py-3 px-8 rounded-xl font-semibold shadow-md hover:bg-blue-700 disabled:bg-gray-400 disabled:cursor-not-allowed transition-all duration-200;
+   }
+   
+   .error-message {
+     @apply mt-2 text-red-600 text-sm text-center font-medium;
+   }
+   
+   .analysis-result {
+     @apply mt-4 text-green-600 text-sm text-center font-medium;
+   }
+   
