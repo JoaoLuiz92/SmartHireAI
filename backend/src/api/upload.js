@@ -1,6 +1,7 @@
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
+const ResumeController = require('../infrastructure/controllers/ResumeController');
 
 const router = express.Router();
 
@@ -15,11 +16,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-router.post('/', upload.single('file'), (req, res) => {
-  if (!req.file) {
-    return res.status(400).json({ error: 'Nenhum arquivo enviado.' });
-  }
-  res.status(200).json({ message: 'Arquivo enviado com sucesso!', file: req.file });
-});
+router.post('/', upload.single('file'), ResumeController.upload);
+router.post('/analyze', ResumeController.analyze);
 
 module.exports = router;
