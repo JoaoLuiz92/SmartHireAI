@@ -45,10 +45,12 @@ O projeto segue os princípios de Domain-Driven Design (DDD) e SOLID para garant
 
 
 ### Instale as dependências do frontend e backend:
+```bash
 cd frontend
 npm install
 cd ../backend
 npm install
+```
 
 ### Configure as variáveis de ambiente no arquivo .env:
 OPENAI_API_KEY=your_openai_api_key_here
@@ -56,14 +58,15 @@ OPENAI_API_KEY=your_openai_api_key_here
 ## Executando o Projeto
 
 ### Inicie o backend:
+```
 cd backend
 npm start
-
+```
 ### Inicie o frontend:
-
+```
 cd frontend
 npm start
-
+```
 ## Acesse a aplicação em http://localhost:3000.
 
 # Contribuição
