@@ -1,9 +1,9 @@
 class Resume {
-    constructor(id, name, content) {
-      this.id = id;
-      this.name = name;
-      this.content = content;
-    }
+  constructor(filePath, originalName, mimeType) {
+    this.filePath = filePath;
+    this.originalName = originalName;
+    this.mimeType = mimeType;
   }
-  
-  module.exports = Resume;
+}
+
+module.exports = Resume;

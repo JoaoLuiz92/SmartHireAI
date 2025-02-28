@@ -1,5 +1,7 @@
-const ResumeService = require('../../domain/services/Resumeservice');
+const ResumeService = require('../../domain/services/ResumeService');
+const ResumeRepository = require('../repositories/ResumeRepository');
 const resumeService = new ResumeService();
+const resumeRepository = new ResumeRepository();
 
 class ResumeController {
   async upload(req, res) {
@@ -8,8 +10,9 @@ class ResumeController {
     }
 
     try {
-      const resume = await resumeService.parseResume(req.file.path);
-      res.status(200).json({ message: 'Arquivo enviado com sucesso!', resume });
+      const resume = resumeRepository.saveResume(req.file);
+      const parsedResume = await resumeService.parseResume(resume.filePath);
+      res.status(200).json({ message: 'Arquivo enviado com sucesso!', resume: parsedResume });
     } catch (error) {
       console.error('Erro ao processar o arquivo:', error);
       res.status(500).json({ error: 'Erro ao processar o arquivo.' });
